@@ -38,7 +38,9 @@ first(names, function(firstName){
 // 2. Write a function called last which returns the last item of the array using a callback function.
 
   //Code Here
-
+  function last(arr, callback) {
+    callback(arr[arr.length-1]);
+  }
 
 
 last(names, function(lastName){
@@ -51,7 +53,9 @@ last(names, function(lastName){
 // 3. Write a function called multiply that multiplies two numbers. Invoke the callback with the result of the multiplication.
 
   //Code Here
-
+  function multiply(num1, num2, callback) {
+    callback(num1*num2);
+  }
 
 
 multiply(4, 3, function(answer){
@@ -65,7 +69,12 @@ multiply(4, 3, function(answer){
 // If the name does not exist, invoke the callback with false as an argument.
 
   //Code Here
-
+  function contains(arr, name, callback) {
+    if (arr.indexOf(name)!== -1) {
+      callback(true);
+    }
+    else callback(false);
+  }
 
 
 
@@ -83,7 +92,17 @@ contains(names, 'Colt', function(result){
 // Invoke the callback with the modified array as an argument.
 
   //Code Here
-
+  //Code Here
+function uniq(arr, callback) {
+  for (i=0; i<arr.length; i++) {
+    for (j=0; j<arr.length; j++) {
+      if (i!==j && arr[i]===arr[j]) {
+        arr.splice(j, 1);
+      }
+    }
+  }
+  callback(arr);
+}
 
 
 uniq(names, function(uniqArr){
