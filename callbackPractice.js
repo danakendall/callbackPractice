@@ -114,9 +114,9 @@ uniq(names, function(uniqArr){
 
     //Code Here
     function each(arr, callback) {
-      forEach() {
-        arr.map(callback(arr[i], i));
-      }
+      //forEach() {
+        //arr.map(callback(arr[i], i));
+      //}
     }
 
 
