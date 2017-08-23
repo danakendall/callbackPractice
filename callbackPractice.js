@@ -130,8 +130,8 @@ each(names, function(item, indice){
 // When the correct user object is found, invoke the callback with the user object as an argument.
 
 // Code here
-function getUserById() {
-
+function getUserById(arr, id, callback) {
+  callback(arr.indexOf(id));
 }
 
 
