@@ -110,13 +110,15 @@ uniq(names, function(uniqArr){
 });
 
 
-// 6. Write a function called each that takes in an array of names. For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
+// 6. Write a function called each that takes in an array of names.
+//For each name in the array, invoke the callback and pass in the name
+//and the name's index as arguments.
 
     //Code Here
     function each(arr, callback) {
-      //forEach() {
-        //arr.map(callback(arr[i], i));
-      //}
+      for (var i=0; i<arr.length; i++) {
+        callback(arr[i], i);
+      } 
     }
 
 
