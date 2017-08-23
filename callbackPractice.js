@@ -131,9 +131,12 @@ each(names, function(item, indice){
 
 // Code here
 function getUserById(arr, id, callback) {
-  var myUserIndex = arr.indexOf(id);
-  var myUser = arr[myUserIndex];
-  callback(myUser);
+  for (var i=0; i<arr.length; i++) {
+    if (arr[i].id === id) {
+      callback(arr[i]);
+      break;
+    }
+  }
 }
 
 
